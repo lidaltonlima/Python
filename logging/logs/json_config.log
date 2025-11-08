@@ -1,0 +1,3 @@
+2025-11-01 09:12:30 | app | INFO | Gravando no arquivo também
+2025-11-01 09:12:30 | modulo.db | WARNING | Aviso do banco de dados
+2025-11-01 09:12:30 | modulo.db | ERROR | Erro crítico no banco

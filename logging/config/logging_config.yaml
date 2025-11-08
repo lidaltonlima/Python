@@ -1,0 +1,36 @@
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  padrao:
+    format: "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
+    datefmt: "%d/%m/%Y %H:%M:%S"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: padrao
+    stream: ext://sys.stdout
+
+  arquivo:
+    class: logging.FileHandler
+    level: INFO
+    formatter: padrao
+    filename: logging/logs/yaml_config.log
+    encoding: utf8
+
+loggers:
+  app:
+    level: DEBUG
+    handlers: [console, arquivo]
+    propagate: no
+
+  modulo.db:
+    level: WARNING
+    handlers: [arquivo]
+    propagate: no
+
+root:
+  level: WARNING
+  handlers: [console]
