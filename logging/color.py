@@ -1,7 +1,6 @@
 """Teste de logging com cores ANSI."""
 import logging
 
-
 class ColorFormatter(logging.Formatter):
     """Formatação de log com cores ANSI."""
     COLORS = {
